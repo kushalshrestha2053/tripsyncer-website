@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 47 95% 53%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 60%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 74.9%;
+    --accent: 47 95% 63%;
+    --accent-foreground: 224 71.4% 4.1%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 60%;
+  }
+}
+
+@layer components {
+  /* Navigation Styles */
+  .nav-background {
+    @apply bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60;
+    @apply dark:bg-background/90 dark:backdrop-blur dark:supports-[backdrop-filter]:bg-background/80;
+    @apply border-b border-border/40;
+    @apply sticky top-0 z-50;
+  }
+
+  .nav-menu-trigger {
+    @apply inline-flex items-center justify-center gap-1;
+  }
+
+  .nav-menu-icon {
+    @apply h-4 w-4 transition-transform duration-200;
+    @apply data-[state=open]:rotate-180;
+  }
+
+  .nav-menu-content {
+    @apply p-4 min-w-[16rem] bg-popover rounded-md border shadow-lg;
+  }
+
+  .nav-menu-link {
+    @apply block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors;
+    @apply hover:bg-accent hover:text-accent-foreground;
+    @apply focus:bg-accent focus:text-accent-foreground;
+  }
+
+  /* Hero Section Styles */
+  .hero-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+    @apply dark:from-primary dark:via-accent dark:to-secondary;
+  }
+
+  .logo-splash {
+    @apply bg-gradient-to-r from-primary/80 via-accent/80 to-secondary/80;
+    @apply dark:from-primary/40 dark:via-accent/40 dark:to-secondary/40;
+  }
+}
