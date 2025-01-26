@@ -12,15 +12,15 @@ export function Footer() {
         <div className="block md:hidden space-y-4">
           <MobileFooterSection
             title="Resources"
-            links={footerNavigation.resources}
+            links={[...footerNavigation.resources]}
           />
           <MobileFooterSection
             title="Company"
-            links={footerNavigation.company}
+            links={[...footerNavigation.company]}
           />
           <MobileFooterSection
             title="Products"
-            links={footerNavigation.products}
+            links={[...footerNavigation.products]}
           />
           <div className="border-t pt-4">
             <NewsletterSection />
@@ -29,9 +29,9 @@ export function Footer() {
 
         {/* Desktop Footer */}
         <div className="hidden md:grid md:grid-cols-4 md:gap-8">
-          <FooterSection title="Resources" links={footerNavigation.resources} />
-          <FooterSection title="Company" links={footerNavigation.company} />
-          <FooterSection title="Products" links={footerNavigation.products} />
+          <FooterSection title="Resources" links={[...footerNavigation.resources]} />
+          <FooterSection title="Company" links={[...footerNavigation.company]} />
+          <FooterSection title="Products" links={[...footerNavigation.products]} />
           <NewsletterSection />
         </div>
 

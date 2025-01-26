@@ -7,9 +7,9 @@ import { footerNavigation } from "@/config/navigation"
 export function MobileFooterNav() {
   return (
     <div className="space-y-4 md:hidden">
-      <FooterAccordionSection title="Resources" items={footerNavigation.resources} />
-      <FooterAccordionSection title="Company" items={footerNavigation.company} />
-      <FooterAccordionSection title="Products" items={footerNavigation.products} />
+      <FooterAccordionSection title="Resources" items={[...footerNavigation.resources]} />
+      <FooterAccordionSection title="Company" items={[...footerNavigation.company]} />
+      <FooterAccordionSection title="Products" items={[...footerNavigation.products]} />
     </div>
   )
 }

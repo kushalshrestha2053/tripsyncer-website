@@ -4,9 +4,9 @@ import { footerNavigation } from "@/config/navigation"
 export function FooterNav() {
   return (
     <>
-      <FooterSection title="Resources" items={footerNavigation.resources} />
-      <FooterSection title="Company" items={footerNavigation.company} />
-      <FooterSection title="Products" items={footerNavigation.products} />
+      <FooterSection title="Resources" items={[...footerNavigation.resources]} />
+      <FooterSection title="Company" items={[...footerNavigation.company]} />
+      <FooterSection title="Products" items={[...footerNavigation.products]} />
     </>
   )
 }

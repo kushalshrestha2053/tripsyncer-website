@@ -7,5 +7,5 @@ interface DesktopFooterNavProps {
 
 export function DesktopFooterNav({ section }: DesktopFooterNavProps) {
   const sectionData = FOOTER_SECTIONS[section]
-  return <FooterNavSection {...sectionData} />
+  return <FooterNavSection  title={sectionData.title} links={[...sectionData.links]} />
 }

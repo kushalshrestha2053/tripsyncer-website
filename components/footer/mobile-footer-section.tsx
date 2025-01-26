@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 
 
-export function MobileFooterSection({ title, links }: MobileFooterSectionProps) {
+export function MobileFooterSection({ title, links }: any) {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value={title} className="border-b border-border/50">
@@ -14,7 +14,7 @@ export function MobileFooterSection({ title, links }: MobileFooterSectionProps) 
         </AccordionTrigger>
         <AccordionContent>
           <ul className="space-y-3 py-2">
-            {links.map((link) => (
+            {links.map((link:any) => (
               <li key={link.href}>
                 <Link 
                   href={link.href} 

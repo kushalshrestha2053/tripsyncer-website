@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils/theme"
 import type { BlogCategory } from "@/lib/constants/blog"
 
 interface CategoryButtonProps {
-  category: BlogCategory | "All"
+  category?: BlogCategory | "All"
   isActive: boolean
   onClick: () => void
 }
