@@ -1,14 +1,10 @@
 export const HERO_STATS = [
   {
     id: 1,
-    value: "10K+",
-    label: "Clients Served"
+    value: "1K+",
+    label: "Users"
   },
-  {
-    id: 2,
-    value: "95%",
-    label: "Success Rate"
-  },
+  
   {
     id: 3,
     value: "24/7",

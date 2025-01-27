@@ -22,6 +22,7 @@ export function BlogCategories({ onCategoryChange }: BlogCategoriesProps) {
       {categories.map((category) => (
         <CategoryButton
           key={category}
+          category={category}
           isActive={category === activeCategory}
           onClick={() => handleCategoryClick(category)}
         />

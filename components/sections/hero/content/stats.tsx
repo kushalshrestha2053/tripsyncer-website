@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { HERO_ANIMATIONS, HERO_STATS } from "@/lib/constants/hero"
+import { motion } from "framer-motion";
+import { HERO_ANIMATIONS, HERO_STATS } from "@/lib/constants/hero";
 
 export function HeroStats() {
   return (
-    <motion.div 
+    <motion.div
       variants={HERO_ANIMATIONS.item}
       className="mt-12 flex items-center justify-center gap-8 text-muted-foreground"
     >

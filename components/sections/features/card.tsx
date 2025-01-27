@@ -32,7 +32,7 @@ export function FeatureCard({
         >
           <Icon className={cn("h-6 w-6", `text-[hsl(var(--${category}))]`)} />
         </div>
-        <h3 className="ml-4 text-lg font-semibold">{title}</h3>
+        <h3 className="ml-4 text-xl font-semibold">{title}</h3>
         <span className=" ml-4 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
           {category}
         </span>

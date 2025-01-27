@@ -12,10 +12,12 @@ import {
 } from "@/components/ui/navigation-menu";
 import { mainNavigation } from "@/config/navigation";
 import { ListItem } from "./list-item";
+import { AuthButtons } from "./auth-buttons";
 
 export function DesktopNav() {
   return (
-    <NavigationMenu className="hidden lg:flex flex-grow">
+    <NavigationMenu className="hidden lg:flex w-full items-center">
+      {/* Left side: Navigation menu items */}
       <NavigationMenuList className="flex space-x-6">
         {mainNavigation.map((item) => (
           <NavigationMenuItem key={item.name}>
@@ -59,6 +61,11 @@ export function DesktopNav() {
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
+
+      {/* Right side: Auth buttons */}
+      <div className="ml-44 mr-4 sm:mr-6 md:mr-8 lg:mr-16 xl:mr-24">
+        <AuthButtons />
+      </div>
     </NavigationMenu>
   );
 }

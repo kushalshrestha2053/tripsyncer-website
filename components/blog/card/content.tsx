@@ -1,14 +1,15 @@
-import Link from "next/link"
+import Link from "next/link";
 
 interface BlogContentProps {
-  title: string
-  excerpt: string
+  title: string;
+  href: string;
+  excerpt: string;
 }
 
-export function BlogContent({ title, excerpt }: BlogContentProps) {
+export function BlogContent({ title, excerpt, href }: BlogContentProps) {
   return (
     <>
-      <Link href="#" className="block group">
+      <Link href={href} target="_blank" className="block group">
         <h3 className="text-lg font-semibold group-hover:text-primary">
           {title}
         </h3>

@@ -14,12 +14,17 @@ export function HeroCTA() {
     >
       <Button size="lg" className="group min-w-[200px]" asChild>
         <Link href="#">
-          Explore Products
+          Start Free Trial (No CC Required)
           <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
       </Button>
       <Button size="lg" variant="outline" className="min-w-[200px]" asChild>
-        <Link href="/blog">Read Success Stories</Link>
+        <Link
+          href="https://www.youtube.com/watch?v=tUjk5QfrOd0"
+          target="_blank"
+        >
+          Watch 90-Second Demo →
+        </Link>
       </Button>
     </motion.div>
   );

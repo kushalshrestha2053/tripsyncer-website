@@ -5,7 +5,7 @@ import NextLink from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1221] text-gray-300 py-12 px-6">
+    <footer className="border-t bg-muted/40 py-16 md:py-24">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Contact */}
@@ -21,10 +21,12 @@ export default function Footer() {
               />
             </NextLink>
             <div className="space-y-2">
-              <div className="text-gray-400">Contact Us At</div>
+              <div className="text-gray-600 dark:text-gray-300">
+                Contact Us At
+              </div>
               <Link
                 href="mailto:info@tripsyncer.com"
-                className="text-[#ffffff] hover:text-[#ffffff]"
+                className=" dark:text-gray-300  hover:text-[#3B82F6]"
               >
                 info@tripsyncer.com
               </Link>
@@ -33,66 +35,82 @@ export default function Footer() {
 
           {/* Useful Links */}
           <div>
-            <h2 className="text-white font-semibold mb-6">USEFUL LINKS</h2>
+            <h2 className=" dark:text-gray-300 font-semibold mb-6">
+              USEFUL LINKS
+            </h2>
             <nav className="flex flex-col space-y-3">
-              <Link href="/" className="text-gray-400 hover:text-[#3B82F6]">
+              <Link
+                href="/"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
+              >
                 Home
               </Link>
               <Link
                 href="/mobile-app"
-                className="text-gray-400 hover:text-[#3B82F6]"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
               >
                 Mobile App
               </Link>
-              <Link href="/tms" className="text-gray-400 hover:text-[#3B82F6]">
+              <Link
+                href="/tms"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
+              >
                 Tour Management System
               </Link>
               <Link
                 href="/marketplace"
-                className="text-gray-400 hover:text-[#3B82F6]"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
               >
                 Marketplace
               </Link>
-              <Link href="/ems" className="text-gray-400 hover:text-[#3B82F6]">
+              <Link
+                href="/ems"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
+              >
                 Event Management System
               </Link>
-              <Link href="/blog" className="text-gray-400 hover:text-[#3B82F6]">
-                Blog{" "}
+              <Link
+                href="/blog"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
+              >
+                Blog
               </Link>
             </nav>
           </div>
 
           {/* Help & Support */}
           <div>
-            <h2 className="text-white font-semibold mb-6">HELP & SUPPORT</h2>
+            <h2 className=" dark:text-gray-300 font-semibold mb-6">
+              HELP & SUPPORT
+            </h2>
             <nav className="flex flex-col space-y-3">
               <Link
                 href="/report"
-                className="text-gray-400 hover:text-[#3B82F6]"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
               >
                 Report a bug
               </Link>
               <Link
                 href="/feature"
-                className="text-gray-400 hover:text-[#3B82F6]"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
               >
                 Request a feature
               </Link>
               <Link
                 href="/roadmap"
-                className="text-gray-400 hover:text-[#3B82F6]"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
               >
                 Our Roadmap
               </Link>
               <Link
                 href="/terms"
-                className="text-gray-400 hover:text-[#3B82F6]"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
               >
                 Terms & conditions
               </Link>
               <Link
                 href="/privacy"
-                className="text-gray-400 hover:text-[#3B82F6]"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
               >
                 Privacy policy
               </Link>
@@ -101,7 +119,7 @@ export default function Footer() {
 
           {/* Let's Try Out */}
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white flex flex-col items-center">
+            <h2 className=" dark:text-gray-300 font-semibold mb-6">
               Let’s Try Out Tripsyncer Mobile App
             </h2>
             <div className="flex justify-center flex-col gap-3">
@@ -137,19 +155,19 @@ export default function Footer() {
                   <svg viewBox="30 336.7 120.9 129.2" width="30">
                     <path
                       fill="#FFD400"
-                      d="M119.2,421.2c15.3-8.4,27-14.8,28-15.3c3.2-1.7,6.5-6.2,0-9.7  c-2.1-1.1-13.4-7.3-28-15.3l-20.1,20.2L119.2,421.2z"
+                      d="M119.2,421.2c15.3-8.4,27-14.8,28-15.3c3.2-1.7,6.5-6.2,0-9.7 c-2.1-1.1-13.4-7.3-28-15.3l-20.1,20.2L119.2,421.2z"
                     ></path>
                     <path
                       fill="#FF3333"
-                      d="M99.1,401.1l-64.2,64.7c1.5,0.2,3.2-0.2,5.2-1.3  c4.2-2.3,48.8-26.7,79.1-43.3L99.1,401.1L99.1,401.1z"
+                      d="M99.1,401.1l-64.2,64.7c1.5,0.2,3.2-0.2,5.2-1.3 c4.2-2.3,48.8-26.7,79.1-43.3L99.1,401.1L99.1,401.1z"
                     ></path>
                     <path
                       fill="#48FF48"
-                      d="M99.1,401.1l20.1-20.2c0,0-74.6-40.7-79.1-43.1  c-1.7-1-3.6-1.3-5.3-1L99.1,401.1z"
+                      d="M99.1,401.1l20.1-20.2c0,0-74.6-40.7-79.1-43.1 c-1.7-1-3.6-1.3-5.3-1L99.1,401.1z"
                     ></path>
                     <path
                       fill="#3BCCFF"
-                      d="M99.1,401.1l-64.3-64.3c-2.6,0.6-4.8,2.9-4.8,7.6  c0,7.5,0,107.5,0,113.8c0,4.3,1.7,7.4,4.9,7.7L99.1,401.1z"
+                      d="M99.1,401.1l-64.3-64.3c-2.6,0.6-4.8,2.9-4.8,7.6 c0,7.5,0,107.5,0,113.8c0,4.3,1.7,7.4,4.9,7.7L99.1,401.1z"
                     ></path>
                   </svg>
                 </div>
@@ -166,17 +184,34 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-gray-800">
-          <p className="text-gray-400 text-sm">
-            © 2024 TripSyncer. All Rights Reserved.
-          </p>
+          <div className="flex items-center space-x-12">
+            <p className="text-gray-400 dark:text-gray-300 text-sm">
+              © 2024 TripSyncer. All Rights Reserved.
+            </p>
+            <Link
+              href="/sitemap"
+              className="text-gray-400 dark:text-gray-300 text-sm hover:text-[#3B82F6]"
+            >
+              Sitemap
+            </Link>
+          </div>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-[#3B82F6]">
+            <Link
+              href="#"
+              className="text-gray-400 dark:text-gray-300 hover:text-[#3B82F6]"
+            >
               <Facebook className="w-5 h-5" />
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-[#3B82F6]">
+            <Link
+              href="#"
+              className="text-gray-400 dark:text-gray-300 hover:text-[#3B82F6]"
+            >
               <DiscordIcon className="w-5 h-5" />
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-[#3B82F6]">
+            <Link
+              href="#"
+              className="text-gray-400 dark:text-gray-300 hover:text-[#3B82F6]"
+            >
               <Twitter className="w-5 h-5" />
             </Link>
           </div>

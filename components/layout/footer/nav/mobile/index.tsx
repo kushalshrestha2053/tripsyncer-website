@@ -5,7 +5,7 @@ export function MobileFooterNav() {
   return (
     <div className="footer-nav-mobile">
       {Object.entries(FOOTER_SECTIONS).map(([key, section]) => (
-        <MobileFooterSection key={key} title={section.title} links={[...section.links]} />
+        <MobileFooterSection key={key} {...section} />
       ))}
     </div>
   );

@@ -10,10 +10,10 @@ export interface Feature {
 }
 
 export type FeatureCategory =
-  | "Tech"
-  | "Business"
-  | "Travel"
-  | "Event";
+  | "Beta"
+  | "Alpha"
+  | "Under Development"
+  | "Coming Soon";
 
 export const FEATURES: Feature[] = [
   {
@@ -21,27 +21,27 @@ export const FEATURES: Feature[] = [
     title: "Mobile App ",
     description: "A mobile application allowing users to book and manage their tours on the go.",
     href: "/mobile-app",
-    category: "Tech",
+    category: "Beta",
   },
   {
     icon: Map,
     title: "Tour Management System",
     description: "Tools for tour operators to manage listings, bookings, and customer interactions.",
     href: "/tour-management",
-    category: "Travel",
+    category: "Alpha",
   },
   {
     icon: ShoppingBag,
     title: "Marketplace ",
     description: "A platform connecting travelers with unique tours and activities worldwide.",
     href: "/marketplace",
-    category: "Business",
+    category: "Under Development",
   },
   {
     icon: Calendar,
     title: "Event Management System",
     description: "Effortlessly manage events with end-to-end planning and scheduling tools.",
     href: "/event-management",
-    category: "Event",
+    category: "Coming Soon",
   },
 ] as const;

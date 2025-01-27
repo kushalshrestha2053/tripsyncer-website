@@ -5,7 +5,7 @@ export function DesktopFooterNav() {
   return (
     <div className="footer-nav-desktop">
       {Object.entries(FOOTER_SECTIONS).map(([key, section]) => (
-        <FooterNavSection key={key} title={section.title} links={[...section.links]} />
+        <FooterNavSection key={key} {...section} />
       ))}
     </div>
   );

@@ -7,6 +7,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { mainNavigation } from "@/config/navigation";
+import { AuthButtons } from "./auth-buttons"; // Assuming you have the AuthButtons component
 
 interface MobileNavProps {
   open: boolean;
@@ -40,6 +41,10 @@ export function MobileNav({ open, onOpenChange }: MobileNavProps) {
                 onSelect={() => onOpenChange(false)}
               />
             ))}
+            {/* Auth Buttons */}
+            <div className="mt-4">
+              <AuthButtons />
+            </div>
           </div>
         </ScrollArea>
       </SheetContent>

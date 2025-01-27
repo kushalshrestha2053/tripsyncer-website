@@ -9,9 +9,11 @@ export function HeroDescription() {
       variants={HERO_ANIMATIONS.item}
       className="mb-8 text-lg text-muted-foreground sm:text-xl"
     >
-      🚀 Uniting Tour Operators, Guides, and Travelers for Effortless Group and
-      Solo Adventures. Streamline your travel planning with AI-powered
-      management, letting you focus on creating unforgettable experiences.
+      Imagine: Your entire tour operation – bookings, guides, pricing, customer
+      communication – living in one zen-like dashboard. No more copy-pasting
+      details across 8 tabs. No more ‘Wait, which version is current?’. Tour
+      Management Software by TripSyncer helps travel businesses like yours
+      manage 3x more tours with 70% less stress. Ready to see how?
     </motion.p>
   );
 }

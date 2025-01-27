@@ -1,14 +1,18 @@
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils/theme"
-import type { BlogCategory } from "@/lib/constants/blog"
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils/theme";
+import type { BlogCategory } from "@/lib/constants/blog";
 
 interface CategoryButtonProps {
-  category?: BlogCategory | "All"
-  isActive: boolean
-  onClick: () => void
+  category: BlogCategory | "All";
+  isActive: boolean;
+  onClick: () => void;
 }
 
-export function CategoryButton({ category, isActive, onClick }: CategoryButtonProps) {
+export function CategoryButton({
+  category,
+  isActive,
+  onClick,
+}: CategoryButtonProps) {
   return (
     <Button
       variant={isActive ? "default" : "outline"}

@@ -4,7 +4,7 @@ import VendorPortfolio from "@/components/pages/tour-management/content";
 
 export const metadata: Metadata = {
   ...sharedMetadata,
-  title: "Vendor Dashboard - Tour Management & CRM",
+  title: "Tour Management System",
   description:
     "Manage your tours, bookings, staff, and invoices with ease. Access CRM tools, tour management features, and streamline your business processes.",
   keywords: [
