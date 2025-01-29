@@ -24,7 +24,7 @@ export function DesktopNav() {
             {"href" in item ? (
               <Link href={item.href} legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} bg-transparent`}
+                  className={`${navigationMenuTriggerStyle()} bg-transparent hover:tect-accent`}
                 >
                   {item.name}
                 </NavigationMenuLink>

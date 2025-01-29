@@ -1,51 +1,49 @@
-import { Metadata } from 'next'
+import { Metadata } from 'next';
 
 export const siteConfig = {
   name: 'TripSyncer',
-  url: 'https://manishsingh.info',
-  description: 'Expert guidance and resources for immigration, tax optimization, technology adoption, AI solutions, and career development.',
+  url: 'https://tripsyncer.com',
+  description: 'Plan unforgettable road trips, host flawless events, and manage professional tours with TripSyncer. AI-powered tools for smarter planning and collaboration. Start free today!',
   keywords: [
-    'immigration guidance',
-    'tax optimization',
-    'AI solutions',
-    'career development',
-    'digital products',
-    'technology consulting',
-    'small business accounting',
-    'visa assistance',
-    'tax planning',
-    'career coaching',
-    'digital downloads',
-    'website templates',
-    'online courses',
-    'stock assets',
-    'website code',
-    'professional development'
+    'road trip planner',
+    'home event manager',
+    'tour management system',
+    'travel app',
+    'event planning app',
+    'AI-powered trip planner',
+    'TripSyncer app'
   ]
-}
+};
 
 export const sharedMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} - Immigration, Tax, Technology, AI & Career Success`,
-    template: `%s | ${siteConfig.name}`
+    default: 'TripSyncer: All-in-One App for Road Trips, Events & Tour Management',
+    template: '%s | TripSyncer'
   },
-  description: siteConfig.description,
+  description: 'Plan unforgettable road trips, host flawless events, and manage professional tours with TripSyncer. AI-powered tools for smarter planning and collaboration. Start free today!',
   keywords: siteConfig.keywords,
-  authors: [{ name: 'Manish Singh' }],
-  creator: 'Manish Singh',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: 'TripSyncer: Your Ultimate Travel Management Companion',
+    description: 'From personal adventures to professional tour management, TripSyncer: Your Ultimate Travel Management Companion. Try it now and create memories effortlessly.',
     siteName: siteConfig.name,
+    images: [
+      {
+        url: '',
+        width: 1200,
+        height: 630,
+        alt: 'TripSyncer Dashboard Overview'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: 'TripSyncer: All-in-One App for Road Trips, Events & Tour Management',
+    description: 'Plan unforgettable road trips, host flawless events, and manage professional tours with TripSyncer. AI-powered tools for smarter planning and collaboration. Start free today!',
+    images: ['https://yourdomain.com/images/tripsyncer-all-in-one-dashboard.jpg']
   },
   robots: {
     index: true,
@@ -55,7 +53,7 @@ export const sharedMetadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+      'max-snippet': -1
+    }
+  }
+};

@@ -9,7 +9,7 @@ export function HeroHeading() {
       variants={HERO_ANIMATIONS.item}
       className="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl hero-gradient bg-clip-text text-transparent"
     >
-      Discover the Best Way to Plan Your Solo & Group RoadTrip.{" "}
+      Plan Adventures, Host Events, and Manage Tours with TripSyncer
     </motion.h1>
   );
 }

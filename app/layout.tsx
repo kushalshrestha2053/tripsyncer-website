@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-background mt-20`}>
+      <body className={`${inter.className} bg-background mt-10 lg:mt-20`}>
         <ThemeProvider>
           <div className="flex min-h-screen flex-col bg-background">
             <Header satisfy={satisfy} />

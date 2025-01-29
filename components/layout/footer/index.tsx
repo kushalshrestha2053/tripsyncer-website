@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Contact */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             <NextLink
               className="flex justify-start items-center gap-1"
               href="/"
@@ -17,16 +17,19 @@ export default function Footer() {
               <img
                 alt="logo"
                 className="z-0 w-40 object-cover"
-                src="/logo1.png"
+                src="/tripsyncer-logo1.png"
               />
             </NextLink>
+            <h2 className="text-gray-600 dark:text-gray-300 text-sm ">
+              TripSyncer: Your Ultimate Travel Management Companion
+            </h2>
             <div className="space-y-2">
               <div className="text-gray-600 dark:text-gray-300">
                 Contact Us At
               </div>
               <Link
                 href="mailto:info@tripsyncer.com"
-                className=" dark:text-gray-300  hover:text-[#3B82F6]"
+                className=" dark:text-gray-300 hover:text-accent"
               >
                 info@tripsyncer.com
               </Link>
@@ -190,7 +193,7 @@ export default function Footer() {
             </p>
             <Link
               href="/sitemap"
-              className="text-gray-400 dark:text-gray-300 text-sm hover:text-[#3B82F6]"
+              className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
             >
               Sitemap
             </Link>
@@ -217,6 +220,15 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Hidden Header */}
+      <h2 className="hidden">
+        TripSyncer: The Ultimate App for Travel, Events, and Tours
+        <br />
+        TripSyncer is your all-in-one companion for road trips, event planning,
+        and tour management. Trusted by individuals and businesses worldwide to
+        simplify logistics and enhance experiences.
+      </h2>
     </footer>
   );
 }

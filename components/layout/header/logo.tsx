@@ -25,7 +25,11 @@ export function Logo({ satisfy }: LogoProps) {
         }}
       />
       <NextLink className="flex justify-start items-center gap-1" href="/">
-        <img alt="logo" className="z-0 w-40 object-cover" src="/logo.png" />
+        <img
+          alt="logo"
+          className="z-0 w-40 object-cover"
+          src="/tripsyncer-logo.png"
+        />
       </NextLink>
     </Link>
   );

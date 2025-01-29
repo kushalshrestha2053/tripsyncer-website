@@ -9,9 +9,10 @@ export function HeroDescription() {
       variants={HERO_ANIMATIONS.item}
       className="mb-8 text-lg text-muted-foreground sm:text-xl"
     >
-      🚀 Connecting Tour Guides, Operators, and Roadtrippers for Seamless Group
-      Travel Experiences. Simplifies your roadtrips management powered by
-      Generative AI, so you can focus on making your memories.
+      From family road trips and home events to global tour management,
+      TripSyncer combines powerful AI and user-friendly tools to simplify your
+      life. Say goodbye to stress and hello to unforgettable experiences and
+      seamless operations.
     </motion.p>
   );
 }

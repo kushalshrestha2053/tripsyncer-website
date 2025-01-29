@@ -10,10 +10,10 @@ export function AuthButtons() {
       <ThemeSwitch />
       <Button
         variant="ghost"
-        className="hidden sm:inline-flex hover:bg-accent/50"
+        className="inline-flex text-black bg-accent hover:bg-accent/80 sm:inline-flex"
         asChild
       >
-        <Link href="/login">Login / Signup</Link>
+        <Link href="/">Login / Signup</Link>
       </Button>
     </div>
   );

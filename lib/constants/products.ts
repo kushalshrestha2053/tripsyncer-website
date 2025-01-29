@@ -5,6 +5,7 @@ export interface Product {
   tags: string[]
   image: string
   category: ProductCategory
+  
 }
 
 export type ProductCategory = 
@@ -27,121 +28,82 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
 export const PRODUCTS: Record<ProductCategory, Product[]> = {
   mobileApp: [
     {
-      title: "Trip Planning 🗺️",
+      title: "Custom Route Planner 🚗",
       description:
-        "Start your adventure effortlessly! Set up your itinerary, invite friends, and hit the road with just a few clicks.",
+        "Design your perfect journey with scenic stops, gas stations, and real-time traffic updates.",
       price: "Free",
-      tags: ["itinerary", "travel-planning", "trip-organization"],
-      image: "/planning.jpeg",
+      tags: ["route-planner", "real-time", "traffic-updates"],
+      image: "/route-planner.jpeg",
+      category: "mobileApp",
+      
+    },
+    {
+      title: "Expense Management 💰",
+      description:
+        "Keep tabs on travel costs like fuel, accommodations, and meals for a hassle-free budget.",
+      price: "Free",
+      tags: ["expense-tracking", "budget-management", "travel-costs"],
+      image: "/expense-management.jpeg",
       category: "mobileApp",
     },
     {
-      title: "Live Location 📍",
+      title: "Collaborative Itineraries 🤝",
       description:
-        "Keep the squad in sync! Always know where your friends are with real-time location updates.",
+        "Share plans with friends and family, assign tasks, and get live updates on changes.",
       price: "Free",
-      tags: ["location-sharing", "real-time", "tracking"],
-      image: "/user-location.jpeg",
+      tags: ["collaboration", "itinerary-sharing", "live-updates"],
+      image: "/collaborative-itineraries.jpeg",
       category: "mobileApp",
     },
     {
-      title: "Pin/Note 📌",
+      title: "Emergency Assistance Locator 🆘",
       description:
-        "Capture every moment and idea on the go. Pin amazing spots and jot down your thoughts with our intuitive note-taking feature.",
+        "Find nearby medical centers, repair shops, and gas stations in just a few taps.",
       price: "Free",
-      tags: ["note-taking", "travel", "bookmarking"],
-      image: "/notes.jpeg",
-      category: "mobileApp",
-    },
-    {
-      title: "Activity Planning 🎢",
-      description:
-        "Dive into excitement with activities everyone loves. Easily browse and book recommended activities tailored to your group's preferences.",
-      price: "Free",
-      tags: ["activity-booking", "group-planning", "travel-activities"],
-      image: "/activities.jpeg",
-      category: "mobileApp",
-    },
-    {
-      title: "Real Time 🔄",
-      description:
-        "Get real-time updates and never miss out on the fun. Stay informed about trip changes and upcoming plans.",
-      price: "Free",
-      tags: ["notifications", "updates", "trip-management"],
-      image: "/user-location.jpeg",
-      category: "mobileApp",
-    },
-    {
-      title: "Stop Points 📍",
-      description:
-        "Organize your journey with precision. Set strategic meetup and stop points to manage your travel itinerary flawlessly.",
-      price: "Free",
-      tags: ["itinerary-management", "stop-points", "planning"],
-      image: "/stop-points.jpeg",
-      category: "mobileApp",
-    },
-    {
-      title: "AI-Activities ✨",
-      description:
-        "Discover activities tailored to your destination and preferences. Our AI analyzes local attractions and suggests the best experiences for your group.",
-      price: "Free",
-      tags: ["AI-recommendations", "destination-guide"],
-      image: "/ai.jpeg",
-      category: "mobileApp",
-    },
-    {
-      title: "Social Sharing 📸",
-      description:
-        "Easily share your favorite travel memories on social media. With just a few taps, post your photos, videos, and travel notes directly to your favorite platforms.",
-      price: "Free",
-      tags: [ "photo-sharing", "travel-memories", "content-creation"],
-      image: "/social.jpeg",
+      tags: ["emergency-locator", "repair-shops", "medical-centers"],
+      image: "/emergency-assistance.jpeg",
       category: "mobileApp",
     },
   ],
 
   tourManagement: [
     {
-      title: 'CRM',
-      description: 'Manage customer relationships effectively with a complete CRM solution.',
-      price: 'Custom pricing',
-      tags: ["customer-management", "tour-operations", "business-tools"],
-      image: 'https://via.placeholder.com/500x300',
-      category: 'tourManagement',
+      title: "Dynamic Itinerary Builder 🗺️",
+      description:
+        "Create detailed tour plans with pricing, GPS locations, and traveler preferences in minutes.",
+      price: "Custom pricing",
+      tags: ["itinerary-builder", "tour-planning", "travel-preferences"],
+      image: "/dynamic-itinerary.jpeg",
+      category: "tourManagement",
     },
     {
-      title: 'Tour Management',
-      description: 'Comprehensive tools to manage your tour offerings, itinerary, and customers.',
-      price: 'Custom pricing',
-      tags: [ "itinerary-management", "tour-operations"],
-      image: 'https://via.placeholder.com/500x300',
-      category: 'tourManagement',
+      title: "Booking Management 📖",
+      description:
+        "Handle confirmations, cancellations, and real-time updates seamlessly.",
+      price: "Custom pricing",
+      tags: ["booking-system", "real-time-updates", "cancellations"],
+      image: "/booking-management.jpeg",
+      category: "tourManagement",
     },
     {
-      title: 'Staff Management',
-      description: 'Easily manage your tour staff, assign roles, and track performance.',
-      price: 'Custom pricing',
-      tags: ["employee-management"],
-      image: 'https://via.placeholder.com/500x300',
-      category: 'tourManagement',
+      title: "Revenue Insights 📈",
+      description:
+        "Track your top-performing tours and identify areas for growth with financial analytics.",
+      price: "Custom pricing",
+      tags: ["revenue-tracking", "financial-analytics", "growth-strategy"],
+      image: "/revenue-insights.jpeg",
+      category: "tourManagement",
     },
     {
-      title: 'Booking System',
-      description: 'A robust booking system that allows your customers to book tours with ease.',
-      price: 'Custom pricing',
-      tags: ["tour-booking", "online-booking"],
-      image: 'https://via.placeholder.com/500x300',
-      category: 'tourManagement',
+      title: "Role-Based Access 🔑",
+      description:
+        "Admins, guides, and accountants see only what they need—nothing more.",
+      price: "Custom pricing",
+      tags: ["role-based-access", "team-management", "permission-control"],
+      image: "/role-based-access.jpeg",
+      category: "tourManagement",
     },
-    {
-      title: 'Invoice Management',
-      description: 'Manage and track invoices seamlessly, ensuring smooth financial operations.',
-      price: 'Custom pricing',
-      tags: ["invoice-management", "billing", "financial-tools"],
-      image: 'https://via.placeholder.com/500x300',
-      category: 'tourManagement',
-    },
-  ],
+  ],  
 
   marketplace: [
     {
@@ -176,25 +138,47 @@ export const PRODUCTS: Record<ProductCategory, Product[]> = {
       image: "https://via.placeholder.com/500x300",
       category: "marketplace",
     },
-    {
-      title: "Tour Availability",
-      description: "Check real-time availability of tours and book instantly.",
-      price: "Subscription-based",
-      tags: ["real-time", "tour-availability", "instant-booking"],
-      image: "https://via.placeholder.com/500x300",
-      category: "marketplace",
-    },
+    
   ],
 
   eventManagement: [
     {
-      title: 'Coming Soon',
-      description: 'Our event management features are coming soon. Stay tuned for more updates!',
-      price: 'Coming soon',
-      tags: ["coming-soon", "future-release"],
-      image: 'https://via.placeholder.com/500x300',
-      category: 'eventManagement',
+      title: "Itinerary Planning 🗓️",
+      description:
+        "Organize event schedules step-by-step, from meal times to entertainment, all in one app.",
+      price: "Subscription-based",
+      tags: ["itinerary-planning", "event-scheduling", "organization"],
+      image: "/itinerary-planning.jpeg",
+      category: "eventManagement",
     },
-  ],
+    {
+      title: "Bulk Invites via Link ✉️",
+      description:
+        "Send one shareable link for RSVPs, and track attendance effortlessly.",
+      price: "Subscription-based",
+      tags: ["bulk-invites", "RSVP-tracking", "event-management"],
+      image: "/bulk-invites.jpeg",
+      category: "eventManagement",
+    },
+    {
+      title: "Shared Photo Repository 📷",
+      description:
+        "Guests can upload, download, and share event photos in a secure gallery.",
+      price: "Subscription-based",
+      tags: ["photo-sharing", "secure-gallery", "event-photos"],
+      image: "/shared-photo-repository.jpeg",
+      category: "eventManagement",
+    },
+    {
+      title: "Social Sharing 📲",
+      description:
+        "Build excitement by sharing updates, photos, and live moments with attendees.",
+      price: "Subscription-based",
+      tags: ["social-sharing", "live-updates", "engagement"],
+      image: "/social-sharing.jpeg",
+      category: "eventManagement",
+    },
+  ]
+  
 };
 

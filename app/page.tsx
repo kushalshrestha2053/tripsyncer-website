@@ -2,30 +2,36 @@ import { HeroSection } from "@/components/sections/hero";
 import { FeaturesSection } from "@/components/sections/features";
 import { ProductsSection } from "@/components/products";
 import { BlogSection } from "@/components/blog";
-import { Newsletter } from "@/components/layout/footer/newsletter";
-import TrustedBySlider from "@/components/slider/trusted-by/slider";
-import SupportedBySlider from "@/components/slider/supported-by/slider";
 import PricingSection from "@/components/sections/pricing/content";
-import CustomerTestimonials from "@/components/sections/testimonials/content";
-import SecurityPrivacySection from "@/components/sections/securityandprivacy/content";
+import Testimonials from "@/components/sections/testimonials/content";
 import FAQSection from "@/components/sections/FAQ/content";
-import FinalCTASection from "@/components/sections/final-cta/content";
+import KeyBenefits from "@/components/sections/key-benefits/content";
+import HowItWorks from "@/components/sections/HowItWorks/content";
+import Integrations from "@/components/sections/integrations/content";
+import DataSecurity from "@/components/sections/data-security/content";
+import CTA from "@/components/sections/cta-section";
+import Newsletter from "@/components/sections/newsletter";
+import FinalCTA from "@/components/sections/final-cta";
+import SupportedAndTrustedBy from "@/components/sections/slider/content";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
+      <SupportedAndTrustedBy />
+      <KeyBenefits />
       <FeaturesSection />
-      <TrustedBySlider />
       <ProductsSection />
-      <SupportedBySlider />
-      <SecurityPrivacySection />
+      <HowItWorks />
+      <Integrations />
+      <DataSecurity />
       <PricingSection />
-      <CustomerTestimonials />
+      <CTA />
+      <Testimonials />
       <BlogSection />
       <FAQSection />
-      <FinalCTASection />
       <Newsletter />
+      <FinalCTA />
     </main>
   );
 }

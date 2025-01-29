@@ -9,9 +9,10 @@ export function HeroDescription() {
       variants={HERO_ANIMATIONS.item}
       className="mb-8 text-lg text-muted-foreground sm:text-xl"
     >
-      🚀 Uniting Tour Operators, Guides, and Travelers for Effortless Group and
-      Solo Adventures. Streamline your travel planning with AI-powered
-      management, letting you focus on creating unforgettable experiences.
+      Whether it’s a cross-country road trip or a cozy home gathering,
+      TripSyncer transforms your planning process with Generative AI tools.
+      Focus on the fun, and let us handle the logistics. From itineraries to
+      invites, it’s all covered.
     </motion.p>
   );
 }

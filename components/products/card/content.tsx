@@ -37,7 +37,7 @@ export function ProductContent({
       <CardHeader className="flex flex-row items-center gap-4">
         {icon}
         <div>
-          <CardTitle>{title}</CardTitle>
+          <h3 className=" text-xl font-semibold">{title}</h3>
 
           <div className="mt-2 flex flex-wrap gap-2">
             {tags.length > 0 && <Badge>{tags[0]}</Badge>}

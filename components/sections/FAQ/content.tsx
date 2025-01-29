@@ -51,7 +51,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-16 bg-background border-b">
+    <section className="border-t bg-muted/40 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           Frequently Asked Questions

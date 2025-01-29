@@ -2,64 +2,34 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { HERO_ANIMATIONS } from "@/lib/constants/hero";
 
 export function HeroCTA() {
-  const handleScroll = (event, targetId) => {
-    event.preventDefault();
-
-    const element = document.getElementById(targetId);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop,
-        behavior: "smooth", // Smooth scroll effect
-      });
-    }
-  };
-
   return (
     <motion.div
-      variants={{
-        hidden: { opacity: 0 },
-        show: { opacity: 1 },
-      }}
-      initial="hidden"
-      animate="show"
-      transition={{ duration: 0.5 }}
+      variants={HERO_ANIMATIONS.item}
       className="flex flex-col items-center justify-center gap-4 sm:flex-row"
     >
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ duration: 0.3 }}
-      >
-        <Button
-          size="lg"
-          className="group min-w-[200px]"
-          asChild
-          onClick={(e) => handleScroll(e, "products")}
-        >
-          <Link href="#products">
-            Explore Products
-            <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </Button>
-      </motion.div>
+      <Button size="lg" className="group min-w-[200px]" asChild>
+        <Link href="#">
+          Start Planning for Free
+          <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </Button>
 
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ duration: 0.3 }}
+      <Button
+        size="lg"
+        variant="outline"
+        className="min-w-[200px] cursor-pointer"
+        asChild
       >
-        <Button
-          size="lg"
-          variant="outline"
-          className="min-w-[200px] cursor-pointer"
-          asChild
-          onClick={(e) => handleScroll(e, "testimonials")}
+        <Link
+          href="https://www.youtube.com/watch?v=tUjk5QfrOd0"
+          target="_blank"
         >
-          <span>Read Success Stories</span>
-        </Button>
-      </motion.div>
+          See How It Works (90-Second Demo)
+        </Link>
+      </Button>
     </motion.div>
   );
 }

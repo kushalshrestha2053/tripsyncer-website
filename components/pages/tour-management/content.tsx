@@ -1,30 +1,38 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Briefcase,
-  ClipboardList,
-  Users,
-  Calendar,
-  FileText,
-} from "lucide-react";
 import { HeroSection } from "./hero";
-import { FeatureList } from "./FeatureSection";
-import { CtaSection } from "./CtaSection";
+import UltimateCTA from "./UltimateCTA";
+import SupportedAndTrustedBy from "@/components/sections/slider/content";
+import KeyBenefits from "./key-benefits/content";
+import TourProComparison from "./split-screen-image/tour-pro-comparison";
+import TMSFeatures from "./tms-feature/content";
+import TourHeroSteps from "./how-it-works/content";
+import AITourManagementPreview from "./ai-powered-tms/content";
+import Integrations from "./integrations/content";
+import SecurityAndPrivacy from "./security-and-privacy/content";
+import PricingSection from "./pricing/content";
+import CustomerLoveSection from "./customer-love/content";
+import FAQSection from "./FAQ/content";
+
+import FinalCTABomb from "./FinalCTA";
 
 export default function VendorPortfolio() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
+    <div>
       <HeroSection />
-
-      {/* Features Section */}
-      <FeatureList />
-
-      {/* CTA Section */}
-      <CtaSection />
+      <SupportedAndTrustedBy />
+      <KeyBenefits />
+      <TourProComparison />
+      <TMSFeatures />
+      <TourHeroSteps />
+      <AITourManagementPreview />
+      <Integrations />
+      <SecurityAndPrivacy />
+      <PricingSection />
+      <UltimateCTA />
+      <CustomerLoveSection />
+      <FAQSection />
+      <FinalCTABomb />
     </div>
   );
 }

@@ -2,6 +2,15 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
+interface ProductContentProps {
+  title: string;
+  description: string;
+  tags: string[];
+  price: string;
+  icon: string;
+  className?: string;
+}
+
 export function ProductFooter() {
   return (
     <div className="flex w-full items-center justify-end">

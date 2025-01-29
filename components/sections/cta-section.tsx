@@ -1,22 +1,19 @@
-import { Container } from "@/components/ui/container"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export function CTASection() {
+export default function CTA() {
   return (
-    <section className="border-t py-16 md:py-24">
-      <Container>
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-4 text-3xl font-bold">Get Started Today</h2>
-          <p className="mb-8 text-muted-foreground">
-            Begin your journey with ManishSingh.info. Sign up now for premium content, personalized guidance, and ongoing
-            support as you navigate the path to personal and professional growth.
-          </p>
-          <Button size="lg" asChild>
-            <Link href="/register">Start Your Journey</Link>
-          </Button>
-        </div>
-      </Container>
+    <section className="border-t bg-muted/40 py-16 md:py-24 dark:bg-muted/10">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          Get Started for Free
+        </h2>
+        <p className="text-xl mb-8">Plan Smarter Today</p>
+        <Button size="lg" variant="default" className="group">
+          Start Planning
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Button>
+      </div>
     </section>
-  )
+  );
 }
