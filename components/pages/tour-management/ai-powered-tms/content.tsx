@@ -47,7 +47,7 @@ export default function AITourManagementPreview() {
   ];
 
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24 border-b">
+    <section className="border-t bg-muted/40 py-10 md:py-16 border-b">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground dark:text-white">
           Coming Soon: AI Powered Tour Management

@@ -6,6 +6,7 @@ import {
   Globe,
   Cloud,
   ChevronRight,
+  Cpu,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -53,11 +54,20 @@ const integrationCategories = [
       { name: "OneDrive (Coming Soon)", link: "https://www.onedrive.com" },
     ],
   },
-];
+  {
+    icon: <Cpu className="w-8 h-8 text-indigo-500" />,
 
+    title: "AI Models",
+    items: [
+      { name: "OpenAI", link: "https://openai.com" },
+      { name: "Anthropic AI", link: "https://www.anthropic.com" },
+      { name: "DeepSeek R1", link: "https://deepseek.com" },
+    ],
+  },
+];
 export default function Integrations() {
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24 ">
+    <section className="border-t bg-muted/40 py-10 md:py-16 ">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">
           Works Seamlessly with Your Favorite Tools

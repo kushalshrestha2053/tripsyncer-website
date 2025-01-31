@@ -1,10 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function Newsletter() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24 dark:bg-muted/10">
+    <section className="border-t bg-muted/40 py-10 md:py-16 dark:bg-muted/10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
@@ -16,13 +29,8 @@ export default function Newsletter() {
               new features delivered straight to your inbox. Join thousands of
               happy users making the most of every journey and event.
             </p>
-            <div className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-grow dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600"
-              />
-              <Button>
+            <div className="flex justify-center gap-2">
+              <Button onClick={handleButtonClick}>
                 Subscribe Now
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -48,6 +56,33 @@ export default function Newsletter() {
           </div>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-4 rounded-lg max-w-xl w-full">
+            <iframe
+              width="540"
+              height="640"
+              src="https://547ae311.sibforms.com/serve/MUIFAGMZXHIeBBveu3G72hRhg-mpCabpTE6gD9Le07EMLdxU4-78JRA3n8B_8U5SKv0gBpb7ZA3HDeIwmeQssqxt9nJ_H32zBaAjApw-emrYsXAiRf0xejK9dadBXryW-Q7h9ZV5C3rufX87ZWMDC7FdJWX9C_DV_OeJn_Ad8DmF8WD2wJR3dpje9EDvvoaKBWDE7xQtxGi0rPAM"
+              frameBorder="0"
+              scrolling="auto"
+              allowFullScreen
+              style={{
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto",
+                maxWidth: "100%",
+              }}
+            ></iframe>
+            <button
+              onClick={handleCloseModal}
+              className="mt-4 text-sm text-red-500"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

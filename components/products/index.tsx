@@ -12,7 +12,7 @@ export function ProductsSection() {
     useState<ProductCategory>("mobileApp");
 
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24">
+    <section className="border-t bg-muted/40 py-10 md:py-16">
       <Container>
         <ProductHeader />
         <ProductCategories

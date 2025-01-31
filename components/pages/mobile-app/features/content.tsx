@@ -168,16 +168,16 @@ const Features = () => {
               className={`cursor-pointer px-2 sm:px-4 py-3 sm:py-6 rounded-lg text-center flex-shrink-0 flex flex-col justify-center items-center transition-all duration-300 snap-center w-[100px] sm:w-[140px]
                 ${
                   selectedTile === category.title
-                    ? "text-pink-500 transform scale-110 bg-white/10 shadow-lg"
-                    : "text-white hover:bg-white/5"
+                    ? "text-accent transform scale-110 bg-white/10 shadow-lg"
+                    : " hover:bg-white/5"
                 }`}
               ref={(el: any) => (itemRefs.current[index] = el)}
               onClick={() => handleTileClick(index, category.title)}
             >
-              <div className="text-2xl sm:text-3xl mb-2 sm:mb-3 transition-transform duration-300 transform hover:scale-110  text-gray-900 dark:text-white">
+              <div className="text-2xl sm:text-3xl mb-2 sm:mb-3 transition-transform duration-300 transform hover:scale-110">
                 {category.icon}
               </div>
-              <div className="text-xs sm:text-sm font-semibold  text-gray-900 dark:text-white">
+              <div className="text-xs sm:text-sm font-semibold">
                 {category.title}
               </div>
             </div>

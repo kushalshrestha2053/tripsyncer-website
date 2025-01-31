@@ -1,5 +1,5 @@
 import { CardDescription } from "@/components/ui/card";
-import { MapPin, Home, Building2, Bot, Smartphone } from "lucide-react";
+import { MapPin, Home, Building2, Bot, Smartphone, Shield } from "lucide-react";
 
 const benefits = [
   {
@@ -16,7 +16,7 @@ const benefits = [
   },
   {
     icon: <Building2 className="w-8 h-8 text-purple-500" />,
-    title: "For Tour Businesses",
+    title: "For Travel Agencies",
     description:
       "Automate bookings, manage itineraries, and track profits—all in one place.",
   },
@@ -32,14 +32,20 @@ const benefits = [
     description:
       "Manage your trips, events, or tours on the go with TripSyncer's mobile app for iOS and Android.",
   },
+  {
+    icon: <Shield className="w-8 h-8 text-indigo-500" />,
+    title: "Data Privacy",
+    description:
+      "Your data, your control, and privacy. We prioritize security and ensure your information stays protected.",
+  },
 ];
 
 export default function KeyBenefits() {
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24 ">
+    <section className="border-t bg-muted/40 py-10 md:py-16 ">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground dark:text-white">
-          Why TripSyncer Is the #1 Choice for Travelers, Hosts, and Businesses
+          Why TripSyncer Is the No.1 Choice for Travelers, Hosts, and Businesses
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (

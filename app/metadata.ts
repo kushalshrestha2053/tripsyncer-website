@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const siteConfig = {
-  name: 'TripSyncer',
+  name: 'Tripsyncer',
   url: 'https://tripsyncer.com',
   description: 'Plan unforgettable road trips, host flawless events, and manage professional tours with TripSyncer. AI-powered tools for smarter planning and collaboration. Start free today!',
   keywords: [
@@ -32,7 +32,7 @@ export const sharedMetadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: '',
+        url: '/tripsyncer-logo.png',
         width: 1200,
         height: 630,
         alt: 'TripSyncer Dashboard Overview'
@@ -43,7 +43,7 @@ export const sharedMetadata: Metadata = {
     card: 'summary_large_image',
     title: 'TripSyncer: All-in-One App for Road Trips, Events & Tour Management',
     description: 'Plan unforgettable road trips, host flawless events, and manage professional tours with TripSyncer. AI-powered tools for smarter planning and collaboration. Start free today!',
-    images: ['https://yourdomain.com/images/tripsyncer-all-in-one-dashboard.jpg']
+    images: ['/tripsyncer-logo.png']
   },
   robots: {
     index: true,

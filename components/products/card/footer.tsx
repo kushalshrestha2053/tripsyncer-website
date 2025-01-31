@@ -1,21 +1,23 @@
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-interface ProductContentProps {
-  title: string;
-  description: string;
-  tags: string[];
-  price: string;
-  icon: string;
-  className?: string;
+interface ProductFooterProps {
+  link: string;
 }
 
-export function ProductFooter() {
+export function ProductFooter({ link }: ProductFooterProps) {
+  // Ensure `link` is defined and is a string before calling `startsWith`
+  const formattedLink =
+    link && typeof link === "string"
+      ? link.startsWith("/")
+        ? link
+        : `/${link}`
+      : "/"; // Default to "/" if `link` is not a valid string
+
   return (
     <div className="flex w-full items-center justify-end">
       <Link
-        href="#"
+        href={formattedLink}
         className={cn(
           "inline-flex items-center text-sm font-medium",
           "text-primary hover:text-primary/80",

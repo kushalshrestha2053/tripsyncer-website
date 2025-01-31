@@ -2,19 +2,12 @@
 
 import { HeroSection } from "./hero";
 import { FeatureList } from "./FeatureSection";
-import { CtaSection } from "./CtaSection";
+import ComingSoonPage from "./ComingSoon";
 
-export default function VendorPortfolio() {
+export default function Marketplace() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Features Section */}
-      <FeatureList />
-
-      {/* CTA Section */}
-      <CtaSection />
+    <div>
+      <ComingSoonPage />
     </div>
   );
 }

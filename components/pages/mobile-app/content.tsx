@@ -23,17 +23,22 @@ import SecurityAndPrivacy from "./security-and-privacy/content";
 import PricingSection from "./CTA/free-cta";
 import Testimonials from "./testimonials/content";
 import FAQSection from "./FAQ/content";
-import SupportedAndTrustedBy from "@/components/sections/slider/content";
+import SupportedAndTrustedBy from "@/components/slider/content";
+import EventPlanningComparison from "./home-event/tour-pro-comparison";
+import EventPlanningFeatures from "./home-event-feature/content";
+import MobileFooter from "@/components/layout/footer/mobile-footer";
 
 export default function MobileApp() {
   return (
-    <div className="min-h-screen">
+    <div>
       <HeroSection />
       <SupportedAndTrustedBy />
       <KeyBenefits />
       <SplitScreenFeatures />
       <RoadTripFeatures />
       <Features />
+      <EventPlanningComparison />
+      <EventPlanningFeatures />
       <HomeEventFeatures />
       <HowItWorks />
       <Integrations />
@@ -42,6 +47,7 @@ export default function MobileApp() {
       <Testimonials />
       <FAQSection />
       <FinalCTA />
+      <MobileFooter />
     </div>
   );
 }

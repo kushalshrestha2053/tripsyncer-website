@@ -20,7 +20,7 @@ import type React from "react";
 
 export default function TMSFeatures() {
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24 border-b">
+    <section className="border-t bg-muted/40 py-10 md:py-16 border-b">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground dark:text-white">
           Your New Command Center: 25+ Features of the Best Tour Management
@@ -28,7 +28,7 @@ export default function TMSFeatures() {
         </h2>
 
         <Tabs defaultValue="core" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 gap-4 mb-8">
+          <TabsList className="grid w-full grid-cols-3 gap-0 mb-8">
             <TabsTrigger value="core" className="text-center">
               Core Features
             </TabsTrigger>

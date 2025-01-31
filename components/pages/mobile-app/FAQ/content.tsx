@@ -42,23 +42,24 @@ export default function FAQSection() {
               key={index}
               className="shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              <CardContent className="p-0 m-2">
+              <CardContent className="p-4 md:p-0">
                 <Button
                   variant="ghost"
-                  className="w-full justify-between p-4 md:p-6 text-left transition-colors duration-300"
+                  className="w-full justify-between p-6 text-left transition-colors duration-300"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <span className="font-semibold text-base md:text-lg break-words whitespace-normal max-w-full">
+                  <span className="font-semibold text-sm md:text-base break-words whitespace-normal max-w-full">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`h-5 w-5 transition-transform duration-300 ${
+                    className={`h-5 w-5 flex-shrink-0 transition-transform duration-300 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                   />
                 </Button>
+
                 <AnimatePresence>
                   {openIndex === index && (
                     <motion.div
@@ -69,7 +70,7 @@ export default function FAQSection() {
                     >
                       <div
                         id={`faq-answer-${index}`}
-                        className="px-4 md:px-6 pb-4 md:pb-6 text-sm md:text-base text-gray-400 mt-3 break-words whitespace-normal max-w-full"
+                        className="px-4 md:px-6 pb-4 md:pb-6 text-sm md:text-base text-gray-400 mt-3 md:mt-4 break-words whitespace-normal max-w-full"
                       >
                         {faq.answer}
                       </div>

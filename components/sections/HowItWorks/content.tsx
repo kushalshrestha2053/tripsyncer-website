@@ -1,33 +1,32 @@
 import { CardDescription } from "@/components/ui/card";
-import { UserPlus, PackageSearch, Cog, Smile } from "lucide-react";
+import { PackageSearch, UserPlus, Cog, Smile } from "lucide-react";
 
 const steps = [
   {
-    icon: <UserPlus className="w-8 h-8 text-blue-500" />,
-    title: "Sign Up for Free",
-    description: "Create your account and start planning instantly.",
+    icon: <PackageSearch className="w-8 h-8 text-blue-500" />,
+    title: "Choose Our Product",
+    description: "Select from Road Trip, Event, or Tour Management tools.",
   },
   {
-    icon: <PackageSearch className="w-8 h-8 text-green-500" />,
-    title: "Select Your Product",
-    description: "Choose between Road Trip, Event, or Tour Management tools.",
+    icon: <UserPlus className="w-8 h-8 text-green-500" />,
+    title: "Sign Up/Register",
+    description: "Create your account and get started instantly.",
   },
   {
     icon: <Cog className="w-8 h-8 text-purple-500" />,
-    title: "Register",
-    description:
-      "Let AI optimize your routes, itineraries, and plans for maximum efficiency.",
+    title: "Use as Per Your Need",
+    description: "Plan, organize, and customize your experience effortlessly.",
   },
   {
     icon: <Smile className="w-8 h-8 text-yellow-500" />,
     title: "Enjoy",
-    description: "Get help with our support.",
+    description: "Experience smooth planning with our easy-to-use tools.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24 dark:bg-muted/10">
+    <section className="border-t bg-muted/40 py-10 md:py-16 dark:bg-muted/10">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">
           TripSyncer in 4 Easy Steps
@@ -39,8 +38,7 @@ export default function HowItWorks() {
                 {step.icon}
               </div>
               <div className="flex-grow">
-                <h3 className=" text-xl font-semibold">{step.title}</h3>
-
+                <h3 className="text-xl font-semibold">{step.title}</h3>
                 <CardDescription>{step.description}</CardDescription>
               </div>
               {index < steps.length - 1 && (

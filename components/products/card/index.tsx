@@ -17,10 +17,17 @@ interface ProductCardProps extends Product {
 export function ProductCard({
   title,
   description,
-
+  link,
   tags,
   image,
   className,
 }: ProductCardProps) {
-  return <ProductContent tags={tags} title={title} description={description} />;
+  return (
+    <ProductContent
+      tags={tags}
+      link={link}
+      title={title}
+      description={description}
+    />
+  );
 }

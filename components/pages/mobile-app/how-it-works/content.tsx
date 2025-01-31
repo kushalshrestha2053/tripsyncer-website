@@ -121,7 +121,7 @@ const HowItWorks = () => {
             ))}
           </div>
 
-          <div
+          {/* <div
             className="mt-16 text-center"
             data-aos="fade-in"
             data-aos-duration="1500"
@@ -147,7 +147,7 @@ const HowItWorks = () => {
                 </span>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

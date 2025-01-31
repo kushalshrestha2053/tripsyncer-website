@@ -16,7 +16,7 @@ import { AuthButtons } from "./auth-buttons";
 
 export function DesktopNav() {
   return (
-    <NavigationMenu className="hidden lg:flex w-full items-center">
+    <NavigationMenu className="hidden lg:flex w-full items-center justify-between">
       {/* Left side: Navigation menu items */}
       <NavigationMenuList className="flex space-x-6">
         {mainNavigation.map((item) => (
@@ -24,7 +24,7 @@ export function DesktopNav() {
             {"href" in item ? (
               <Link href={item.href} legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`${navigationMenuTriggerStyle()} bg-transparent hover:tect-accent`}
+                  className={`${navigationMenuTriggerStyle()} bg-transparent hover:text-accent`}
                 >
                   {item.name}
                 </NavigationMenuLink>
@@ -62,8 +62,7 @@ export function DesktopNav() {
         ))}
       </NavigationMenuList>
 
-      {/* Right side: Auth buttons */}
-      <div className="ml-44 mr-4 sm:mr-6 md:mr-8 lg:mr-16 xl:mr-24">
+      <div className="ml-4 sm:ml-8 md:ml-12 lg:ml-24 xl:ml-48 2xl:ml-72">
         <AuthButtons />
       </div>
     </NavigationMenu>

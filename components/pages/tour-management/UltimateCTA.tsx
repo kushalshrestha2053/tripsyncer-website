@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function UltimateCTA() {
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24">
+    <section className="border-t bg-muted/40 py-10 md:py-16">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ export default function UltimateCTA() {
             <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
           <p className="mt-6">
-            No credit card required • 14-day free trial • Cancel anytime
+            No credit card required • Start Your Free Trial • Cancel anytime
           </p>
         </motion.div>
       </div>

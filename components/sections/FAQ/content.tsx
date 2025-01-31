@@ -12,34 +12,56 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "How do I book a tour?",
+    question: "Are all Tripsyncer products free right now?",
     answer:
-      "Booking a tour is easy! Simply browse our available tours, select the one you're interested in, choose your preferred date, and follow the booking process. You'll need to provide some basic information and make a payment to confirm your reservation.",
+      "Yes! Since we’re in Beta, all four products—the Tripsyncer Mobile App, Tour Management System, Event Management System, and Marketplace—are currently free to use. We appreciate your feedback as we refine our offerings, and Beta users receive special perks for helping shape the platform.",
   },
   {
-    question: "What is your cancellation policy?",
+    question:
+      "Will there be separate subscriptions for each product in the future?",
     answer:
-      "We understand that plans can change. Our standard cancellation policy allows for a full refund if cancelled at least 7 days before the tour date. Cancellations made 3-6 days prior to the tour date are eligible for a 50% refund. Unfortunately, we cannot offer refunds for cancellations made less than 3 days before the tour date.",
+      "We’re still working out our final pricing models. We may offer bundled plans to unlock all four products or individual subscriptions if you only need one or two. Stay tuned for updates—your input will guide our decisions!",
   },
   {
-    question: "Are your tours suitable for children?",
+    question: "What does the Tripsyncer Mobile App do?",
     answer:
-      "Many of our tours are family-friendly and suitable for children. Each tour description includes information about age suitability. If you have specific concerns, please contact our customer service team, and we'll be happy to help you find the perfect tour for your family.",
+      "It’s your personal group trip planner and home events planner on the go. Whether you’re a traveler needing real-time itinerary tracking, a tour guide wanting to coordinate groups, or simply someone who values staying organized, the Tripsyncer Mobile App keeps everything in one place.\n\nComing Soon in Future Updates:\n- Itinerary Sync: Seamless link to our Tour and Event Management Systems\n- Instant Alerts: Push notifications for schedule changes, travel notes, images, and event reminders\n- Group Chat: Built-in messaging to share updates and coordinate with your travel group",
   },
   {
-    question: "What should I bring on the tour?",
+    question:
+      "How does the Tour Management System differ from the Event Management System?",
     answer:
-      "The items you should bring depend on the specific tour. Generally, we recommend comfortable walking shoes, weather-appropriate clothing, sunscreen, and a water bottle. For each tour, we provide a detailed list of recommended items in the tour information and in your booking confirmation email.",
+      "Tour Management System: Designed for tour operators, travel agencies, and guides. Schedule trips, manage bookings, track itineraries, and automate communications.\n\nEvent Management System: Ideal for concerts, conferences, festivals, and other gatherings. Create event listings, sell tickets, manage attendees, and send real-time updates.",
   },
   {
-    question: "Do you offer private tours?",
+    question: "What’s the Marketplace all about?",
     answer:
-      "Yes, we offer private tours for many of our destinations. Private tours allow for a more personalized experience and can be customized to your group's interests and needs. Please contact our customer service team for more information and to book a private tour.",
+      "The Marketplace is your buy-and-sell hub for tours, travel packages, and event tickets. List your experiences for a global audience, or browse unique offerings from other creators. It’s a convenient, centralized space to discover new adventures or showcase your own.",
   },
   {
-    question: "How do I contact customer support?",
+    question: "Do I need any technical expertise to use these tools?",
     answer:
-      "Our customer support team is available 24/7. You can reach us by email at support@yourtourcompany.com, by phone at +1 (555) 123-4567, or through the chat feature on our website. We aim to respond to all inquiries within 24 hours.",
+      "Not at all! We’ve made each product beginner-friendly with clear navigation, in-app tutorials, and pop-up tips. If you ever hit a snag, our support team is just a message away.",
+  },
+  {
+    question: "How secure is my data with Tripsyncer?",
+    answer:
+      "We take privacy and security seriously. All data is protected by industry-standard encryption and stored on secure servers. As we grow, we’ll continue implementing advanced security features to ensure your information remains safe.",
+  },
+  {
+    question: "Can I integrate Tripsyncer with other tools I already use?",
+    answer:
+      "Absolutely. While in Beta, we’re actively developing integrations with popular platforms like Google Calendar, Slack, Stripe, and more. Our goal is to make Tripsyncer fit seamlessly into your existing workflow.",
+  },
+  {
+    question: "Are there usage limits or caps during Beta?",
+    answer:
+      "There are no strict limits right now. However, if you’re planning something very large-scale—like hundreds of tours or a huge event—just let us know, so we can ensure optimal performance and address any potential hiccups.",
+  },
+  {
+    question: "How can I give feedback or request new features?",
+    answer:
+      "We love hearing from our users! You can reach out via:\n- In-app chat (built into each product)\n- Email: support@tripsyncer.com\n- Community Forum: Share suggestions, report bugs, or upvote feature requests\n\nYour input is crucial to making Tripsyncer the best it can be.",
   },
 ];
 
@@ -51,18 +73,18 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24">
+    <section className="border-t bg-muted/40 py-12 md:py-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Frequently Asked Questions
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+          Got Questions? We’ve Got Answers.
         </h2>
-        <div className="max-w-3xl mx-auto space-y-6">
+        <div className="max-w-3xl mx-auto space-y-4 md:space-y-6">
           {faqs.map((faq, index) => (
             <Card
               key={index}
-              className=" shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              <CardContent className="p-0">
+              <CardContent className="p-4 md:p-0">
                 <Button
                   variant="ghost"
                   className="w-full justify-between p-6 text-left transition-colors duration-300"
@@ -70,11 +92,16 @@ export default function FAQSection() {
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <span className="font-semibold text-lg">{faq.question}</span>
+                  <span className="font-semibold text-sm md:text-base break-words whitespace-normal max-w-full">
+                    {faq.question}
+                  </span>
                   <ChevronDown
-                    className={`h-5 w-5 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
+                    className={`h-5 w-5 flex-shrink-0 transition-transform duration-300 ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
                   />
                 </Button>
+
                 <AnimatePresence>
                   {openIndex === index && (
                     <motion.div
@@ -85,7 +112,7 @@ export default function FAQSection() {
                     >
                       <div
                         id={`faq-answer-${index}`}
-                        className="px-6 pb-6 text-gray-400 mt-3"
+                        className="px-4 md:px-6 pb-4 md:pb-6 text-sm md:text-base text-gray-400 mt-3 md:mt-4 break-words whitespace-normal max-w-full"
                       >
                         {faq.answer}
                       </div>
@@ -96,12 +123,6 @@ export default function FAQSection() {
             </Card>
           ))}
         </div>
-        {/* <div className="mt-12 text-center">
-          <p className="text-gray-300 mb-4">
-            Can't find the answer you're looking for?
-          </p>
-          <Button className="font-semibold">Contact Our Support Team</Button>
-        </div> */}
       </div>
     </section>
   );

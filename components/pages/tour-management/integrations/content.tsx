@@ -1,22 +1,30 @@
 import { CardDescription } from "@/components/ui/card";
-import { CreditCard, Globe, Zap, ChevronRight } from "lucide-react";
+import { CreditCard, Globe, Zap, ChevronRight, Wrench } from "lucide-react";
 import Link from "next/link";
 
 const integrationCategories = [
   {
     icon: <CreditCard className="w-8 h-8 text-green-500" />,
-    title: "Payments",
+    title: "Integrations",
     items: [
       { name: "Stripe", link: "https://stripe.com" },
       { name: "PayPal", link: "https://www.paypal.com" },
-      { name: "Domain", link: "https://www.namecheap.com" },
-      { name: "SMTP", link: "https://www.smtp.com" },
+    ],
+  },
+  {
+    icon: <Wrench className="w-8 h-8 text-yellow-500" />,
+    title: "Services",
+    items: [
+      { name: " Your Domain", link: "https://www.namecheap.com" },
+      { name: " Your SMTP", link: "https://www.smtp.com" },
+      { name: "Aaksh SMS", link: "https://aakashsms.com/" },
       { name: "Twilio", link: "https://www.twilio.com" },
     ],
   },
   {
     icon: <Globe className="w-8 h-8 text-blue-500" />,
     title: "Travel Tech",
+    comingSoon: true,
     items: [
       { name: "Amadeus", link: "https://www.amadeus.com" },
       { name: "Booking.com API", link: "https://www.booking.com" },
@@ -27,14 +35,15 @@ const integrationCategories = [
   {
     icon: <Zap className="w-8 h-8 text-orange-500" />,
     title: "Automation",
+    comingSoon: true,
     items: [
       {
-        name: "Zapier and Pabbly Connect",
+        name: "Zapier",
         link: "https://www.zapier.com",
       },
       {
-        name: "Custom Magic (Coming Soon)",
-        link: "",
+        name: "Pabbly Connect",
+        link: "https://www.pabbly.com/connect/",
       },
     ],
   },
@@ -47,7 +56,7 @@ export default function Integrations() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">
           Plays Nice with Your Favorite Tools
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols- gap-16">
           {integrationCategories.map((category, index) => (
             <div
               key={index}
@@ -55,7 +64,14 @@ export default function Integrations() {
             >
               <div className="flex items-center mb-4">
                 {category.icon}
-                <h3 className="ml-4 text-xl font-semibold">{category.title}</h3>
+                <h3 className="ml-4 text-xl font-semibold">
+                  {category.title}
+                  {category.comingSoon && (
+                    <span className="ml-2 px-2 py-1 text-xs font-medium bg-gradient-to-r from-purple-400 to-pink-500 text-white rounded-full">
+                      Coming Soon
+                    </span>
+                  )}
+                </h3>
               </div>
               <ul className="space-y-2">
                 {category.items.map((item, itemIndex) => (

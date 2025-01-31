@@ -40,7 +40,7 @@ export default function SplitScreenFeatures() {
           <div className="p-6 rounded-lg shadow-md bg-card border text-card-foreground transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg dark:bg-card/70 dark:text-card-foreground/90">
             <div className="p-6">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Event Planning
+                Home Events Planning
               </h3>
               <div className="relative h-72 mb-4">
                 <Image
@@ -54,7 +54,7 @@ export default function SplitScreenFeatures() {
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-900 dark:text-gray-100">
                   <Calendar className="h-5 w-5 text-green-500 mr-2" />
-                  <span>Detailed event itineraries</span>
+                  <span>Detailed home event itineraries</span>
                 </li>
                 <li className="flex items-center text-gray-900 dark:text-gray-100">
                   <Link className="h-5 w-5 text-green-500 mr-2" />

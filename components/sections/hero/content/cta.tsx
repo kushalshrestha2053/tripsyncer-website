@@ -5,16 +5,31 @@ import Link from "next/link";
 import { HERO_ANIMATIONS } from "@/lib/constants/hero";
 
 export function HeroCTA() {
+  const handleScroll = () => {
+    const section = document.getElementById("products");
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <motion.div
       variants={HERO_ANIMATIONS.item}
       className="flex flex-col items-center justify-center gap-4 sm:flex-row"
     >
-      <Button size="lg" className="group min-w-[200px]" asChild>
-        <Link href="#">
+      <Button
+        size="lg"
+        className="group min-w-[200px]"
+        asChild
+        onClick={handleScroll}
+      >
+        <span>
           Start Planning for Free
           <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </Link>
+        </span>
       </Button>
 
       <Button

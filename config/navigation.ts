@@ -29,7 +29,7 @@ export const mainNavigation = [
       },
     ],
   },
-  { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "https://blog.tripsyncer.com" },
 ] as const;
 
 export const footerNavigation = {

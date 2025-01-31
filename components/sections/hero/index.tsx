@@ -6,7 +6,7 @@ import { HeroContent } from "./content";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background py-20 md:py-10">
+    <section className="relative overflow-hidden bg-background py-20 md:py-16">
       <HeroBackground />
       <Container>
         <HeroContent />

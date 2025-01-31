@@ -54,15 +54,15 @@ const features = [
 
 export default function HomeEventFeatures() {
   return (
-    <section className="py-16 md:py-24 bg-muted/40 border-t">
+    <section className="py-10 md:py-16 bg-muted/40 border-t">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground dark:text-white">
           Turn Your Gatherings into Flawless Experiences
         </h2>
 
-        <h3 className="text-xl md:text-2xl font-semibold text-center mb-12 text-muted-foreground">
-          Core Features
-        </h3>
+        <p className="mx-auto text-center max-w-2xl mb-12 text-lg text-muted-foreground">
+          Home Event Planning Core Features
+        </p>
 
         <div className="space-y-16 md:space-y-24">
           {features.map((feature, index) => (

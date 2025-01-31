@@ -2,7 +2,7 @@
 
 import { HeroSection } from "./hero";
 import UltimateCTA from "./UltimateCTA";
-import SupportedAndTrustedBy from "@/components/sections/slider/content";
+import SupportedAndTrustedBy from "@/components/slider/content";
 import KeyBenefits from "./key-benefits/content";
 import TourProComparison from "./split-screen-image/tour-pro-comparison";
 import TMSFeatures from "./tms-feature/content";

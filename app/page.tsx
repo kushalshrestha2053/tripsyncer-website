@@ -12,7 +12,7 @@ import DataSecurity from "@/components/sections/data-security/content";
 import CTA from "@/components/sections/cta-section";
 import Newsletter from "@/components/sections/newsletter";
 import FinalCTA from "@/components/sections/final-cta";
-import SupportedAndTrustedBy from "@/components/sections/slider/content";
+import SupportedAndTrustedBy from "@/components/slider/content";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
       <HowItWorks />
       <Integrations />
       <DataSecurity />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <CTA />
       <Testimonials />
       <BlogSection />

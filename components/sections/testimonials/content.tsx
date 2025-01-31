@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24">
+    <section className="border-t bg-muted/40 py-10 md:py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">
           Loved by Travelers, Hosts, and Tour Operators

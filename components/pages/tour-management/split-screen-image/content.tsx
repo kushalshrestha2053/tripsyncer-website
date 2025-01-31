@@ -17,11 +17,7 @@ export function Dashboard() {
         content="Next show: Central Park, NYC"
       />
       <DashboardCard icon={Users} title="Team" content="12 members confirmed" />
-      <DashboardCard
-        icon={Music}
-        title="Setlist"
-        content="15 songs, 90 minutes"
-      />
+
       <DashboardCard
         icon={Truck}
         title="Logistics"
@@ -37,7 +33,6 @@ export function Dashboard() {
         title="Social Media"
         content="3 posts scheduled"
       />
-      <DashboardCard icon={Clock} title="Rehearsal" content="Daily, 2-5 PM" />
     </div>
   );
 }

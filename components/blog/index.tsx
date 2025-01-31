@@ -10,7 +10,7 @@ export function BlogSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   return (
-    <section className="border-t bg-muted/40 py-16 md:py-24 dark:bg-muted/10">
+    <section className="border-t bg-muted/40 py-10 md:py-16 dark:bg-muted/10">
       <Container>
         <BlogHeader />
         <BlogCategories onCategoryChange={setSelectedCategory} />

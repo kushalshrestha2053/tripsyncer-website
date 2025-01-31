@@ -1,11 +1,23 @@
-import Image from "next/image";
+"use client";
 import Link from "next/link";
-import { Facebook, Twitter, DiscIcon as DiscordIcon } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import NextLink from "next/link";
+import { useEffect, useState } from "react";
+import Gleap from "gleap";
+import { footerData } from "../footer/footerData";
 
 export default function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  const [isUsefulLinksOpen, setIsUsefulLinksOpen] = useState(false);
+  const [isHelpSupportOpen, setIsHelpSupportOpen] = useState(false);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
-    <footer className="border-t bg-muted/40 py-16 md:py-24">
+    <footer className="border-t bg-muted/40 py-10 md:py-16">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Contact */}
@@ -15,119 +27,97 @@ export default function Footer() {
               href="/"
             >
               <img
-                alt="logo"
+                alt={footerData.logoAlt}
                 className="z-0 w-40 object-cover"
-                src="/tripsyncer-logo1.png"
+                src={footerData.logo}
               />
             </NextLink>
-            <h2 className="text-gray-600 dark:text-gray-300 text-sm ">
-              TripSyncer: Your Ultimate Travel Management Companion
+            <h2 className="text-gray-600 dark:text-gray-300 text-sm">
+              {footerData.description}
             </h2>
             <div className="space-y-2">
-              <div className="text-gray-600 dark:text-gray-300">
+              <div className=" dark:text-gray-300 font-semibold">
                 Contact Us At
               </div>
               <Link
-                href="mailto:info@tripsyncer.com"
-                className=" dark:text-gray-300 hover:text-accent"
+                href={`mailto:${footerData.contactEmail}`}
+                className=" text-gray-600 dark:text-gray-300 hover:text-accent"
               >
-                info@tripsyncer.com
+                {footerData.contactEmail}
               </Link>
             </div>
           </div>
 
           {/* Useful Links */}
           <div>
-            <h2 className=" dark:text-gray-300 font-semibold mb-6">
+            <h2
+              className="dark:text-gray-300 font-semibold mb-6 flex justify-between items-center cursor-pointer"
+              onClick={() => setIsUsefulLinksOpen(!isUsefulLinksOpen)}
+            >
               USEFUL LINKS
+              <span className="text-gray-400 dark:text-gray-300 lg:hidden">
+                {isUsefulLinksOpen ? "▲" : "▼"}
+              </span>
             </h2>
-            <nav className="flex flex-col space-y-3">
-              <Link
-                href="/"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Home
-              </Link>
-              <Link
-                href="/mobile-app"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Mobile App
-              </Link>
-              <Link
-                href="/tms"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Tour Management System
-              </Link>
-              <Link
-                href="/marketplace"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Marketplace
-              </Link>
-              <Link
-                href="/ems"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Event Management System
-              </Link>
-              <Link
-                href="/blog"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Blog
-              </Link>
+
+            <nav
+              className={`flex flex-col space-y-3 ${isUsefulLinksOpen ? "block" : "hidden"} md:flex md:space-y-4`}
+            >
+              {footerData.usefulLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-600 dark:text-gray-300 hover:text-accent"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
 
           {/* Help & Support */}
           <div>
-            <h2 className=" dark:text-gray-300 font-semibold mb-6">
+            <h2
+              className="dark:text-gray-300 font-semibold mb-6 flex justify-between items-center cursor-pointer"
+              onClick={() => setIsHelpSupportOpen(!isHelpSupportOpen)}
+            >
               HELP & SUPPORT
+              <span className="text-gray-400 dark:text-gray-300 lg:hidden">
+                {isHelpSupportOpen ? "▲" : "▼"}
+              </span>
             </h2>
-            <nav className="flex flex-col space-y-3">
-              <Link
-                href="/report"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Report a bug
-              </Link>
-              <Link
-                href="/feature"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Request a feature
-              </Link>
-              <Link
-                href="/roadmap"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Our Roadmap
-              </Link>
-              <Link
-                href="/terms"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Terms & conditions
-              </Link>
-              <Link
-                href="/privacy"
-                className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-              >
-                Privacy policy
-              </Link>
+
+            <nav
+              className={`flex flex-col space-y-3 ${isHelpSupportOpen ? "block" : "hidden"} md:flex md:space-y-4`}
+            >
+              {footerData.helpSupport.map((item) =>
+                item.href ? (
+                  <Link key={item.label} href={item.href}>
+                    <button className="text-gray-600 dark:text-gray-300 hover:text-accent text-left">
+                      {item.label}
+                    </button>
+                  </Link>
+                ) : (
+                  <button
+                    key={item.label}
+                    onClick={() => Gleap.startClassicForm(item.action, true)}
+                    className="text-gray-600 dark:text-gray-300 hover:text-accent text-left"
+                  >
+                    {item.label}
+                  </button>
+                )
+              )}
             </nav>
           </div>
 
           {/* Let's Try Out */}
           <div>
-            <h2 className=" dark:text-gray-300 font-semibold mb-6">
+            <h2 className="dark:text-gray-300 font-semibold mb-6">
               Let’s Try Out Tripsyncer Mobile App
             </h2>
             <div className="flex justify-center flex-col gap-3">
               <a
-                href="https://apps.apple.com/us/app/tripsyncer/id6502956755"
+                href={footerData.appLinks.ios}
                 rel="noopener noreferrer"
                 target="_blank"
                 className="flex items-center justify-center w-48 text-white bg-black h-14 rounded-xl"
@@ -149,7 +139,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://play.google.com/store/apps/details?id=com.tripsyncer"
+                href={footerData.appLinks.android}
                 rel="noopener noreferrer"
                 target="_blank"
                 className="flex items-center justify-center w-48 text-white bg-black h-14 rounded-xl"
@@ -189,33 +179,40 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-gray-800">
           <div className="flex items-center space-x-12">
             <p className="text-gray-400 dark:text-gray-300 text-sm">
-              © 2024 TripSyncer. All Rights Reserved.
+              © {year} Tripsyncer. All Rights Reserved.
             </p>
-            <Link
-              href="/sitemap"
-              className="text-gray-600 dark:text-gray-300 hover:text-[#3B82F6]"
-            >
+
+            <p className="text-gray-400 dark:text-gray-300 text-sm cursor-pointer hover:text-accent">
               Sitemap
-            </Link>
+            </p>
           </div>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
             <Link
-              href="#"
-              className="text-gray-400 dark:text-gray-300 hover:text-[#3B82F6]"
+              href={footerData.socialLinks.facebook}
+              target="blank"
+              className="text-gray-400 dark:text-gray-300 hover:text-accent"
             >
               <Facebook className="w-5 h-5" />
             </Link>
             <Link
-              href="#"
-              className="text-gray-400 dark:text-gray-300 hover:text-[#3B82F6]"
+              href={footerData.socialLinks.instagram}
+              target="blank"
+              className="text-gray-400 dark:text-gray-300 hover:text-accent"
             >
-              <DiscordIcon className="w-5 h-5" />
+              <Instagram className="w-5 h-5" />
             </Link>
             <Link
-              href="#"
-              className="text-gray-400 dark:text-gray-300 hover:text-[#3B82F6]"
+              href={footerData.socialLinks.linkedin}
+              target="blank"
+              className="text-gray-400 dark:text-gray-300 hover:text-accent"
             >
-              <Twitter className="w-5 h-5" />
+              <Linkedin className="w-5 h-5" />
+            </Link>
+            <Link
+              href={footerData.socialLinks.twitter}
+              className="text-gray-400 dark:text-gray-300 hover:text-accent"
+            >
+              <span className="font-bold">X</span>
             </Link>
           </div>
         </div>
