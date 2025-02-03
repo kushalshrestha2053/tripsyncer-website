@@ -28,7 +28,7 @@ const integrationCategories = [
     items: [
       { name: "Amadeus", link: "https://www.amadeus.com" },
       { name: "Booking.com API", link: "https://www.booking.com" },
-      { name: "Viator", link: "https://www.viator.com" },
+      { name: "Viator", link: "https://www.viator.com/Rome/d511-ttd" },
       { name: "Get your Guide", link: "https://www.getyourguide.com" },
     ],
   },

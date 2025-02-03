@@ -22,7 +22,7 @@ const integrationCategories = [
     icon: <MessageCircle className="w-8 h-8 text-purple-500" />,
     title: "Communication",
     items: [
-      { name: "WhatsApp", link: "https://www.whatsapp.com" },
+      { name: "WhatsApp", link: "https://wa.me/" },
       { name: "Slack", link: "https://slack.com" },
       { name: "Email", link: "https://www.gmail.com" },
       { name: "SMS", link: "https://www.twilio.com" },

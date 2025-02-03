@@ -4,7 +4,7 @@ import VendorPortfolio from "@/components/pages/tour-management/content";
 
 export const metadata: Metadata = {
   ...sharedMetadata,
-  title: "#1 Tour Management Software for Agencies & Guides",
+  title: "No.1 Tour Management Software for Agencies & Guides",
   description:
     "Easily manage tours with Tripsyncer's all-in-one tour management software. Automate itineraries, live updates, SEO tools, and more. Start your free trial now!",
   keywords: [

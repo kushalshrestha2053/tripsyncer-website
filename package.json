@@ -1,5 +1,5 @@
 {
-  "name": "manishsingh-info",
+  "name": "tripsyncer",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -39,6 +39,7 @@
     "react-icons": "^5.4.0",
     "react-markdown": "^9.0.1",
     "react-slick": "^0.30.3",
+    "sitemap": "^8.0.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.1",
     "tailwind-merge": "^2.6.0",

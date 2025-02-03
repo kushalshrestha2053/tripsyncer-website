@@ -26,7 +26,7 @@ import FAQSection from "./FAQ/content";
 import SupportedAndTrustedBy from "@/components/slider/content";
 import EventPlanningComparison from "./home-event/tour-pro-comparison";
 import EventPlanningFeatures from "./home-event-feature/content";
-import MobileFooter from "@/components/layout/footer/mobile-footer";
+import MobileFooter from "@/components/layout/footer/mobile-app/mobile-footer";
 
 export default function MobileApp() {
   return (

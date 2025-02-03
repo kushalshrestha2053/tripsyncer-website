@@ -18,8 +18,8 @@ export default function SplitScreenFeatures() {
                 <Image
                   src="/tripsyncer-mobile-app-road-trip.jpeg"
                   alt="Tripsyncer: trip planning mobile app"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   className="rounded-md"
                 />
               </div>
@@ -46,8 +46,8 @@ export default function SplitScreenFeatures() {
                 <Image
                   src="/tripsyncer-mobile-app-events.jpg"
                   alt="Tripsyncer: event planning mobile app"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                   className="rounded-md"
                 />
               </div>

@@ -5,11 +5,11 @@ export const footerData = {
   contactEmail: "info@tripsyncer.com",
   usefulLinks: [
     { href: "/", label: "Home" },
-    { href: "/mobile-app", label: "Mobile App" },
-    { href: "/tour-management", label: "Tour Management System" },
-    { href: "/marketplace", label: "Marketplace" },
-    { href: "/event-management", label: "Event Management System" },
     { href: "https://blog.tripsyncer.com", label: "Blog" },
+  ],
+  comparison: [
+    { href: "", label: "Tripsyncer App Vs RoadTripper" },
+    { href: "", label: "Tripsyncer App vs Wanderlog" },
   ],
   helpSupport: [
     { action: "bugreporting", label: "Report a bug" },
@@ -18,6 +18,7 @@ export const footerData = {
     { href: "/terms-and-conditions", label: "Terms & conditions" },
     { href: "/privacy-policy", label: "Privacy policy" },
   ],
+
   appLinks: {
     ios: "https://apps.apple.com/us/app/tripsyncer/id6502956755",
     android: "https://play.google.com/store/apps/details?id=com.tripsyncer",
@@ -26,6 +27,6 @@ export const footerData = {
     facebook: "https://www.facebook.com/tripsyncer.official",
     instagram: "https://www.instagram.com/tripsyncer.inc/",
     linkedin: "https://www.linkedin.com/company/tripsyncer/about/",
-    twitter: "https://www.x.com",
+    twitter: "",
   },
 };

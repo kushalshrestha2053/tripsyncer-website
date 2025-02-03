@@ -8,11 +8,35 @@ const inter = Inter({ subsets: ["latin"] });
 const satisfy = Satisfy({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tripsyncer: Group Roadtrip planning with our AI powered cutting-edge",
+  title: "TripSyncer: All-in-One App for Road Trips, Events & Tour Management",
   description:
-    "Expert guidance and resources for immigration, tax optimization, technology adoption, AI solutions, and career development.",
-  keywords:
-    "immigration guidance, tax optimization, AI solutions, career development, digital products, technology consulting",
+    "Plan unforgettable road trips, host flawless events, and manage professional tours with TripSyncer. AI-powered tools for smarter planning and collaboration. Start free today!",
+  keywords: [
+    "road trip planner",
+    "home event manager",
+    "tour management system",
+    "travel app",
+    "event planning app",
+    "AI-powered trip planner",
+    "TripSyncer app",
+  ],
+  // openGraph: {
+  //   type: "website",
+  //   locale: "en_US",
+  //   url: "https://tripsyncer.com",
+  //   title: "TripSyncer: Your Ultimate Travel Management Companion",
+  //   description:
+  //     "From personal adventures to professional tour management, TripSyncer: Your Ultimate Travel Management Companion. Try it now and create memories effortlessly.",
+  //   siteName: "Tripsyncer",
+  //   images: [
+  //     {
+  //       url: "/tripsyncer-logo.png",
+  //       width: 1200,
+  //       height: 630,
+  //       alt: "TripSyncer Dashboard Overview",
+  //     },
+  //   ],
+  // },
 };
 
 export default function RootLayout({

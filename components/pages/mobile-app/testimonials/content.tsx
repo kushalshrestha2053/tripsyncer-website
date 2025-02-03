@@ -5,14 +5,12 @@ import Image from "next/image";
 const testimonials = [
   {
     name: "Jessica",
-    image: "/placeholder.svg?height=100&width=100",
 
     quote:
       "TripSyncer's bulk invite feature made organizing our 50-person family reunion a breeze. Everyone had the details they needed, and I didn't have to spend hours on individual invitations.",
   },
   {
     name: "Chris",
-    image: "/placeholder.svg?height=100&width=100",
 
     quote:
       "Planning a 1,000-mile road trip used to be stressful, but TripSyncer's route planner turned it into a relaxed adventure. I could focus on enjoying the journey, not worrying about the logistics.",
@@ -34,13 +32,13 @@ export default function Testimonials() {
             >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Image
+                  {/* <Image
                     src={testimonial.image || "/placeholder.svg"}
                     alt={testimonial.name}
                     width={60}
                     height={60}
                     className="rounded-full mr-4"
-                  />
+                  /> */}
                   <div>
                     <h3 className="ml-4 text-xl font-semibold">
                       {testimonial.name}
